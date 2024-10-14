@@ -17,9 +17,7 @@ public class MethodReference {
         int substrResult = performOperation(x,y, substruction);
         System.out.println("Substruction: " + substrResult);
 
-        MathOperation multiplication = MethodReference::multiplyNumbers; //method reference
-        int multResult = performOperation(x,y, multiplication);
-        System.out.println("Multiplication: " + multResult);
+        System.out.println("Multiplication: " + performOperation(x,y, MethodReference::multiplyNumbers)); //method reference
     }
 
     private static int subtractNumbers(int a, int b){
